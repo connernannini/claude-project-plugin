@@ -33,7 +33,7 @@ Rebuilds context from project files so the user can pick up where they left off.
 - Present status:
 
 > **Project**: {name}
-> **Last worked on**: {date}
+> **Last worked on**: {datetime}
 > **Current phase**: {phase} — {description}
 > **What was done last time**: {summary}
 > **Next steps**: {list}

@@ -28,7 +28,7 @@ Read-only status overview. Does not start or resume work — just reports.
 
 > **{Project Name}**
 > Phase {X} of {Y}: {phase name}
-> Last session: {date} — {one-line summary}
+> Last session: {datetime} — {one-line summary}
 > Next steps: {bulleted list}
 > Status: {On track / Blocked / Needs input / Stale}
 
@@ -40,7 +40,7 @@ Read-only status overview. Does not start or resume work — just reports.
 
 > | Project | Phase | Last Active | Status | Next Step |
 > |---------|-------|-------------|--------|-----------|
-> | {name}  | {X/Y} | {date}     | {status} | {one-liner} |
+> | {name}  | {X/Y} | {datetime}     | {status} | {one-liner} |
 
 - Ask: "Want to dive into any of these, or start something new?"
 

@@ -50,6 +50,7 @@ Research is only useful later if it's written down. When Claude does substantial
 - **Task tracking**: Use TodoWrite for any work involving 3+ steps.
 - **Scripts**: Save generated scripts in the project's `scripts/` folder, not temp directories.
 - **Working data**: Raw external pulls go in `data_raw/`; data you transform or derive locally goes in `data_manipulated/`.
+- **Timestamps**: write date/time stamps (journal entry headers, `learned_through`, index `Last Active`, `Last updated`/`Last verified` markers, plan-approval and scaffolding stamps) as `YYYY-MM-DD HH:MM` local time. Run `date "+%Y-%m-%d %H:%M"` to get the current time — never guess it.
 - **Plan management**: When a phase completes or scope changes, draft plan updates and present
   for approval before saving.
 - **Knowledge file size cap**: 12K chars → warn before adding more. 15K → stop; offer prune,

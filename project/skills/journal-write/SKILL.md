@@ -23,7 +23,7 @@ If the entry marks a phase complete, flag that `project-plan.md` may need updati
 ### Standard Entry
 
 ```markdown
-## {date} — {title}
+## {datetime} — {title}
 **Phase**: {current phase from project-plan.md}
 **Status**: {what's done, in progress, blocked}
 
@@ -48,7 +48,7 @@ If the entry marks a phase complete, flag that `project-plan.md` may need updati
 Use when checkpointing mid-session (proactive persistence). Add `(checkpoint)` to the title:
 
 ```markdown
-## {date} — Session checkpoint
+## {datetime} — Session checkpoint
 ```
 
 Keep it lighter — focus on decisions, open questions or blockers, and state that would be lost if the session ended now.

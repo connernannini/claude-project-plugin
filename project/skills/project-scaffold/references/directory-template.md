@@ -57,7 +57,7 @@ Generate a permissions file that whitelists only the MCP tools needed for this p
 
 During scaffolding, append a "Scaffolding Complete" entry:
 ```markdown
-## Scaffolding Complete — {date} {time}
+## Scaffolding Complete — {datetime}
 **Phase**: Project Setup
 **Summary**: Plan approved. Directory scaffolded. Ready for execution.
 **Key decisions to preserve**:

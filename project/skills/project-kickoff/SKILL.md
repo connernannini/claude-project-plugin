@@ -44,7 +44,7 @@ Do not proceed to Step 2 until the user confirms the discovery summary.
 Do not proceed until the user explicitly approves the plan.
 
 **On approval** (do all immediately):
-1. Update `project-plan.md` — remove draft header, mark `**Status: Approved — {date}**`
+1. Update `project-plan.md` — remove draft header, mark `**Status: Approved — {datetime}**`
 2. Synthesize journal — clean kickoff summary at top (objective, systems, key decisions, approved plan). Keep raw entries below.
 3. Update project-index.md — status "Plan approved" and current phase
 

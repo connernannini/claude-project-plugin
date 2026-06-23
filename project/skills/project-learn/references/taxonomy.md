@@ -34,7 +34,7 @@ The authoritative reference for all knowledge categories. Used by:
 - Execution knowledge (API approaches, workarounds, tool behavior) → **tools file**
 - Repeatable procedures → kept in the project; if broadly reusable, graduated into a **skill** (no shared runbook store)
 - Reusable technical methodologies (not system-specific, not business-domain-specific) → **techniques file**
-- When capturing time-sensitive facts (rate limits, API behaviors, pricing), include "*(as of {date})*"
+- When capturing time-sensitive facts (rate limits, API behaviors, pricing), include "*(as of {datetime})*"
 
 ### SKILL.md vs references/ — default to references/
 
@@ -60,10 +60,10 @@ When a finding involves a system you don't yet have a knowledge skill for, and i
 
 ## Section-Level Timestamps (MANDATORY)
 
-Every H2 section (`##`) in a knowledge file must have a `*Last updated: {date}*` line immediately after the heading. When `/project-learn` or real-time capture writes to a section, update that section's timestamp. When creating a new section, add the timestamp. This enables granular staleness detection — staleness checks can flag individual stale sections, not just stale files. Format:
+Every H2 section (`##`) in a knowledge file must have a `*Last updated: {datetime}*` line immediately after the heading. When `/project-learn` or real-time capture writes to a section, update that section's timestamp. When creating a new section, add the timestamp. This enables granular staleness detection — staleness checks can flag individual stale sections, not just stale files. Format:
 ```
 ## Known Gotchas
-*Last updated: 2026-03-24*
+*Last updated: 2026-03-24 14:30*
 ```
 Applies to all knowledge files: `~/.claude/skills/{s}/references/tools.md`, `~/.claude/skills/{s}/references/domain.md`, `~/.claude/skills/{s}/references/enums.md`.
 

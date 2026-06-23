@@ -51,13 +51,13 @@ For each approved finding:
 - Read target file, find insertion point
 - **Size cap**: 12K chars → warn before adding. 15K chars → stop. Offer prune, split, or promote.
 - **Consolidation**: If 2+ existing entries cover the same topic as the new finding, propose merging into one clearer entry instead of appending
-- Write content, update section timestamp (`*Last updated: {date}*`) on the specific section modified
-- **File-level timestamp**: Update `*Last verified: {date}*` at the top of the file. If missing, add it after the H1 heading.
+- Write content, update section timestamp (`*Last updated: {datetime}*`) on the specific section modified
+- **File-level timestamp**: Update `*Last verified: {datetime}*` at the top of the file. If missing, add it after the H1 heading.
 - If a new file was created under a skill's `references/` directory, add it to that skill's `SKILL.md` References section
 
 ### 4. Confirm
 - Advance `learned_through` in journal frontmatter to the latest scanned entry (even if no findings)
-- Summary: "Done. Backfilled {N} journal entries. {M} learnings captured across {files}. `learned_through` advanced to {date}."
+- Summary: "Done. Backfilled {N} journal entries. {M} learnings captured across {files}. `learned_through` advanced to {datetime}."
 
 ---
 
@@ -73,7 +73,7 @@ For each approved finding:
 ### 3. Write
 - Dedup against target file — skip if substance already captured
 - Size cap check (same thresholds as sweep)
-- Write content, update section timestamp (`*Last updated: {date}*`) and file-level timestamp (`*Last verified: {date}*`)
+- Write content, update section timestamp (`*Last updated: {datetime}*`) and file-level timestamp (`*Last verified: {datetime}*`)
 - If a new file was created under a skill's `references/` directory, add it to that skill's `SKILL.md` References section
 - Advance `learned_through` in journal frontmatter
 - One-line confirmation
