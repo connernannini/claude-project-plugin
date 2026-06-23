@@ -1,0 +1,14 @@
+{
+  "name": "claude-project-plugin",
+  "owner": {
+    "name": "Conner Nannini"
+  },
+  "description": "Marketplace hosting the `project` project-management framework plugin for Claude Code.",
+  "plugins": [
+    {
+      "name": "project",
+      "source": "./project",
+      "description": "A portable project-management framework for Claude Code: guided kickoff, automatic journaling, knowledge capture, and save/resume across sessions."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "description": "A portable project-management framework for Claude Code: guided kickoff, automatic journaling, knowledge capture, and save/resume across sessions.",
+  "author": {
+    "name": "Conner Nannini"
+  },
+  "license": "MIT AND LicenseRef-Commons-Clause",
+  "keywords": [
+    "project-management",
+    "workflow",
+    "journaling",
+    "knowledge-capture",
+    "lifecycle"
+  ]
+}
