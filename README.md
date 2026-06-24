@@ -14,6 +14,8 @@ claude plugin install project@claude-project-plugin
 
 Then run `/project-onboard` to set up, and `/project-kickoff` to start your first project.
 
+New here? Follow the [getting-started walkthrough](project/docs/getting-started.md).
+
 ## What's inside
 
 - **9 lifecycle skills** — onboard, kickoff, scaffold, save, resume, status, complete, learn, journal-write

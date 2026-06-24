@@ -38,6 +38,23 @@ The framework is four layers working together:
 
 You mostly interact with the skills; the state files and conventions do the remembering.
 
+Here's the lifecycle at a glance:
+
+```mermaid
+flowchart TD
+    O["/project-onboard<br/>one-time setup"] --> K["/project-kickoff<br/>discovery, plan, scaffold"]
+    K --> W{{Work on the project}}
+    W -->|checkpoint anytime| S["/project-save"]
+    S --> W
+    W -->|new session| R["/project-resume<br/>rebuilds context"]
+    R --> W
+    W -->|finished| C["/project-complete<br/>distill + archive"]
+    K -. adds row .-> IDX[(project index)]
+    S -. updates .-> IDX
+    C -. marks complete .-> IDX
+    W -. auto-journal + knowledge capture .-> J[(journal & knowledge)]
+```
+
 ## What it tracks: the state files
 
 Everything lives as Markdown under your projects folder (`{root}/`). There are two scopes:
@@ -146,6 +163,9 @@ tools, your decisions, and how you work.
    existing folder), install the framework's rules there, and create the starter project index.
 3. That's it — start your first project with `/project-kickoff`.
 
+New to the framework? The [getting-started walkthrough](docs/getting-started.md) walks through a
+full project end to end.
+
 `project` stores everything as Markdown under the folder you choose. It never stores secret
 values and never modifies your global `~/.claude/CLAUDE.md`. The only things it writes outside
 your projects folder are small one-line pointer files under `~/.claude/` — where your projects
@@ -164,6 +184,13 @@ live, and (if you use the data agents) where your secrets live, never the secret
 
 Journaling and knowledge capture happen automatically as you work — the installed rules prompt
 Claude to record decisions, data pulls, and milestones so nothing is lost.
+
+**Work from the project's folder.** The framework figures out which project you're in from your
+**current folder**. Open or `cd` into `{root}/{project-name}/` before working — that's how
+`/project-save`, `/project-resume`, and `/project-status` know which project you mean, and how
+the project's own `CLAUDE.md` loads. Run a skill from the wrong place and Claude flags the
+mismatch before writing anything — but starting each session from inside the project's folder is
+the smooth path.
 
 ## Customization
 
