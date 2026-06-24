@@ -3,8 +3,8 @@
 A walkthrough of using **`project`** end to end — from first-time setup through finishing a
 project. Assumes the plugin is installed (`claude plugin install project@claude-project-plugin`).
 
-> **One idea to hold onto:** the framework figures out which project you're working on from your
-> **current folder**. Start each working session from inside the project's folder, and the right
+> **One idea to hold onto:** the framework figures out which project you're working on from the
+> folder your session is open in. Start each session in the project's folder, and the right
 > context loads automatically.
 
 ## 1. One-time setup
@@ -19,21 +19,26 @@ of everything you'll work on. You only do this once per machine.
 
 ## 2. Start a project
 
-From the folder where your projects live:
+Each project gets its **own folder** under your projects root. **Create the folder first, then open
+a new session in it** and run kickoff there — that's what keeps everything in one session:
 
-```
-/project-kickoff
-```
+1. Make a new folder for the project under your projects root (for example, `sales-dashboard`).
+   You can place it inside a category folder if you like — e.g. `clients/acme` — nested to any depth.
+2. Open a new session in that folder.
+3. Run `/project-kickoff`.
 
-Kickoff walks you through:
+A project is simply wherever its own folder sits under the root; the index keeps the flat list
+across all of them.
+
+Kickoff then walks you through:
 
 - **Discovery** — a few questions about what you're trying to do, which systems are involved, and
   the inputs and outputs.
 - **A written plan** — it drafts a phased plan and waits for your approval before doing anything
   else.
-- **Scaffolding** — on approval, it creates the project's folder (`{root}/{name}/`) with its own
-  `CLAUDE.md`, `project-plan.md`, `journal.md`, and working subfolders, and adds a row to the
-  project index.
+- **Scaffolding** — on approval, it builds out the project's files (`CLAUDE.md`, `project-plan.md`,
+  `journal.md`, and the working subfolders) right in that folder, and adds a row to the project
+  index.
 
 It also checks for **prior projects** that touched the same systems, so you start with whatever
 they already learned.
@@ -60,7 +65,7 @@ Save whenever you want a checkpoint — it's fast and non-disruptive. Save and k
 
 ## 5. Come back later
 
-In a new session, open the project's folder and:
+Open a new session in the project's folder, then run:
 
 ```
 /project-resume

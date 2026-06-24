@@ -76,7 +76,8 @@ projects that share a system or domain. `project-save` keeps it current — you 
 
 ### Each project's own files
 
-A project lives in `{root}/{project-name}/`:
+A project lives in its own folder under the root — flat (`{root}/{project-name}/`) or nested in a
+category folder you make (`{root}/clients/acme/`):
 
 ```
 {project-name}/
@@ -185,12 +186,13 @@ live, and (if you use the data agents) where your secrets live, never the secret
 Journaling and knowledge capture happen automatically as you work — the installed rules prompt
 Claude to record decisions, data pulls, and milestones so nothing is lost.
 
-**Work from the project's folder.** The framework figures out which project you're in from your
-**current folder**. Open or `cd` into `{root}/{project-name}/` before working — that's how
-`/project-save`, `/project-resume`, and `/project-status` know which project you mean, and how
-the project's own `CLAUDE.md` loads. Run a skill from the wrong place and Claude flags the
-mismatch before writing anything — but starting each session from inside the project's folder is
-the smooth path.
+**Work from the project's folder.** The framework figures out which project you're in from the
+folder your session is open in. Open the project's folder (wherever it lives under the root — it
+can be nested in a category folder) and start your session there — that's how `/project-save`,
+`/project-resume`, and `/project-status` know which project you mean, and how the project's own
+`CLAUDE.md` loads. For a *new* project, **create its folder first, then open a new session in it
+and run `/project-kickoff`** so everything happens in one session. Run a skill from the wrong place
+and Claude flags the mismatch before writing anything.
 
 ## Customization
 

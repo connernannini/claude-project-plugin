@@ -17,7 +17,7 @@ Creates the project directory and files after a plan is approved. Pure execution
 
 ### 1. Create directory structure
 - Read `references/directory-template.md` for the standard layout
-- Create `{CLAUDE_PROJECT_ROOT}/{project-name}/` with: `inputs/`, `outputs/`, `data_raw/`, `data_manipulated/`, `research/`, `scripts/`, `audit-logs/`, `.claude/`
+- Create the project structure **in the current folder** (cwd — the clean project folder kickoff confirmed; do NOT create a separate `{CLAUDE_PROJECT_ROOT}/{project-name}/`): `inputs/`, `outputs/`, `data_raw/`, `data_manipulated/`, `research/`, `scripts/`, `audit-logs/`, `.claude/`
 
 ### 2. Generate project CLAUDE.md
 - Write CLAUDE.md per the template in `references/directory-template.md`:
