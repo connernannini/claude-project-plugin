@@ -86,6 +86,7 @@ For each approved finding:
 - NEVER auto-persist knowledge without user approval. Journal backfills are auto-written (triggers are well-defined).
 - Size cap: 12K warn, 15K stop. Offer prune, split, or promote.
 - `learned_through` timestamp: always advance after scanning, even if nothing found
+- **Timestamp format**: write `{datetime}` stamps as `YYYY-MM-DD HH:MM` (local) — run `date "+%Y-%m-%d %H:%M"` to get the current time; never guess it.
 - Concrete findings only — "{system} status codes changed" not "{system} data may be stale"
 
 ## References

@@ -48,6 +48,8 @@ Do not proceed until the user explicitly approves the plan.
 2. Synthesize journal — clean kickoff summary at top (objective, systems, key decisions, approved plan). Keep raw entries below.
 3. Update project-index.md — status "Plan approved" and current phase
 
+**Timestamp format**: write `{datetime}` stamps as `YYYY-MM-DD HH:MM` (local) — run `date "+%Y-%m-%d %H:%M"` to get the current time; never guess it.
+
 ### 3. System Prep
 - For each system in the plan, read its knowledge skill (`~/.claude/skills/{system}/SKILL.md`) and assess: does the existing content cover what this project needs?
 - Report findings to the user:

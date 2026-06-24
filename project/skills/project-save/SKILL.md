@@ -59,6 +59,8 @@ Write a summary checkpoint entry — a high-level "where things stand" bookmark.
 
 Update phase and last-activity date in `{CLAUDE_PROJECT_ROOT}/context/project-index.md`. **Keep the phase column terse — 1–3 words ("Phase 4", "Plan approved", "Validation", "Blocked on review"). The index is a manifest, not a status report.** Detailed phase context lives in the project's CLAUDE.md and journal; do not duplicate it here. If a status flips (Active ↔ Complete, Backlog → Active), update that too.
 
+**Timestamp format**: write `{datetime}` stamps as `YYYY-MM-DD HH:MM` (local) — run `date "+%Y-%m-%d %H:%M"` to get the current time; never guess it.
+
 ## Step 6: Confirm
 
 Keep it brief.
