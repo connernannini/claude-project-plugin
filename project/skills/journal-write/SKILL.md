@@ -20,6 +20,8 @@ Append to the project's `journal.md`. Keep user-facing output to a one-line conf
 
 If the entry marks a phase complete, flag that `project-plan.md` may need updating. Present the plan update for user approval before saving.
 
+**Timestamp format**: write `{datetime}` stamps as `YYYY-MM-DD HH:MM` (local) — run `date "+%Y-%m-%d %H:%M"` to get the current time; never guess it.
+
 ### Standard Entry
 
 ```markdown

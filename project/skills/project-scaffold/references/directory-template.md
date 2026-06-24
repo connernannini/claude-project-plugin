@@ -66,6 +66,8 @@ During scaffolding, append a "Scaffolding Complete" entry:
 - [first actionable items from the project plan]
 ```
 
+**Timestamp format**: write `{datetime}` stamps as `YYYY-MM-DD HH:MM` (local) — run `date "+%Y-%m-%d %H:%M"` to get the current time; never guess it.
+
 ## Output Stubs
 Create the `inputs/`, `outputs/`, `data_raw/`, `data_manipulated/`, `research/`, `scripts/`, and `audit-logs/` directories. Do not create placeholder files — deliverables will be added during project execution.
 
