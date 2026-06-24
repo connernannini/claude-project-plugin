@@ -16,7 +16,7 @@ Guides the user through defining a project, creating a plan, and scaffolding the
 ## Steps
 
 ### 1. Discover
-- **Directory check**: Verify cwd is under `{CLAUDE_PROJECT_ROOT}/` and is a clean directory (no existing `CLAUDE.md` or `project-plan.md`). If it has both, suggest `/project-resume`. If it has `journal.md` but no `CLAUDE.md`, a prior kickoff was interrupted — read journal and pick up where it left off. If not in a project dir, offer to create `{CLAUDE_PROJECT_ROOT}/{name}/` and tell the user to start a new session from there.
+- **Directory check**: Verify the current folder is a clean project folder under `{CLAUDE_PROJECT_ROOT}/` (no existing `CLAUDE.md` or `project-plan.md`) — **this folder is the project, and scaffolding happens right here**. If it already has `CLAUDE.md` + `project-plan.md`, suggest `/project-resume`. If it has `journal.md` but no `CLAUDE.md`, a prior kickoff was interrupted — read journal and pick up where it left off. If the current folder is the root itself or not a clean folder, ask the user to create a folder for the project — flat (`{CLAUDE_PROJECT_ROOT}/my-project/`) or nested in a category (`{CLAUDE_PROJECT_ROOT}/clients/acme/`) — open a new session in it, and re-run `/project-kickoff` so it scaffolds in place and stays in one session.
 - Ask 3-5 tailored discovery questions (skip what's obvious from context):
   1. What are you trying to accomplish? What does success look like?
   2. What systems are involved? Where does the data live?
@@ -27,7 +27,7 @@ Guides the user through defining a project, creating a plan, and scaffolding the
   1. Read their `CLAUDE.md` and `project-plan.md` for scope and key decisions
   2. If relevant to the new project, scan their journal for specific gotchas, patterns, and reusable context
   3. Surface anything useful: "A past project on {system} found X — worth knowing here"
-- Ask for a project name: "What should we call this project? Pick a short name — something like `sales-dashboard` or `vendor-audit`."
+- **Project name**: default to the current folder's name; confirm with the user ("I'll call this `acme-migration` — good, or pick another short name?"). The name labels the index row and journal entries; the project's location is the folder you're already in.
 
 **Journal capture**: Create `journal.md` as soon as the directory is confirmed. Append discovery answers, systems, and decisions incrementally — don't wait until the phase is complete.
 

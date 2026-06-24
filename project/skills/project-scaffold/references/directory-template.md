@@ -1,10 +1,10 @@
 # Project Directory Template
 
 ## Structure
-All projects live under `{CLAUDE_PROJECT_ROOT}/`. Create:
+Each project is its own folder under `{CLAUDE_PROJECT_ROOT}/` — flat, or nested in a category folder. Scaffold the **current** folder (the clean one kickoff confirmed), which gives this layout:
 
 ```
-{CLAUDE_PROJECT_ROOT}/{project-name}/
+{project-name}/
 ├── CLAUDE.md                    # Project-specific instructions and guardrails
 ├── project-plan.md              # The approved plan from kickoff
 ├── journal.md                   # Auto-maintained session log
