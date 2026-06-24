@@ -12,6 +12,15 @@ Claude a set of skills, agents, and always-on rules that read and write those fi
 Start a project once; pick it back up days later with full context rebuilt from its plan and
 journal — and keep a bird's-eye view of every project you've ever started.
 
+## What it is — and isn't
+
+`project` is a **framework for managing ad hoc, multi-session projects** — the scaffolding,
+durable memory, and lifecycle workflow that sit *on top of* whatever else Claude can already do.
+It is **not** a replacement for task-specific or domain skills. It works alongside them: kickoff
+reads the knowledge skills you already have, `system-scout` can bootstrap new ones for unfamiliar
+systems, and the data agents handle bulk data work. Think of it as the project-management layer
+that orchestrates your other skills for a piece of work — not a substitute for them.
+
 ## How it works
 
 The framework is four layers working together:
@@ -112,6 +121,23 @@ files without being told. The main ones:
   generated scripts in `scripts/`.
 - **Guardrails** — confirm before writing project state from the wrong directory; one project per
   session; "save"/"checkpoint" always routes through `project-save`.
+
+## It gets better the more you use it
+
+The framework is designed to **accumulate context**, so each project starts further ahead than
+the last:
+
+- **Knowledge capture** turns one-off discoveries — a gotcha, an API limit, a business rule —
+  into durable knowledge skills that auto-load next time they're relevant (`system-scout`
+  bootstraps new ones for unfamiliar systems).
+- **Every project's journal is permanent.** When you start something new, `project-kickoff`
+  scans prior projects that share a system or domain and surfaces what they learned — so you
+  don't re-discover the same things.
+- **The project index** keeps the whole portfolio in view, and `project-complete` distills each
+  finished project into reusable patterns.
+
+Nothing is captured without your approval — but over time, the system knows more about your
+tools, your decisions, and how you work.
 
 ## Setup
 
